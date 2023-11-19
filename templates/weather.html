@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Weather Conditions</title>
+    <title>Weather in {{ title }} </title>
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
 </head>
 <body>
-    <h1>Get Weather Conditions</h1>
+    <h1>Current weather in {{ title }}</h1>
+    <p>{{ status }} and {{ temp }} &deg;</p>
+    <p>Feels like {{ feels_like }} &deg;</p>
     <form action="/weather">
         <input type="text" name="city" id="city" placeholder="Enter a city" />
         <button type="submit">Submit</button>
